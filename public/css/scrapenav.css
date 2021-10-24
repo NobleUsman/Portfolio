@@ -1,0 +1,549 @@
+/*
+
+CHANGES : 
++ add "letter-spacing" after taBLET SIZE
++ add credits to IAN, Jack, alvarotrigo( https://github.com/alvarotrigo/fullPage.js ), 
+
+*/
+
+/**
+===============================================================
+===============================================================
+## LEGENDS :
+
+- GLOBAL
+  - BASE
+  - TYPOGRAPHY / BUTTONS
+- NAVBAR
+- 
+- MEDIA QUERIES
+
+
+## COLOR PALETTE ( https://colorhunt.co/palette/0820322c394b334756ff4c29 ) :
+
+- Primary ( #082032 ) Darkest Main (PREVIOUS: #0-8-2-0-3-2)
+- Secondary-1 ( #fff ) White
+- Secondary-2 ( #334756 ) Lightest Main (PREVIOUS: #3-3-4-7-5-6)
+- Accent ( #21E6C1 ) Accent Main (PREVIOUS: #F-F-4-C-2-9) 
+- Accent ( #0e6454 ) Accent Darker [ !Added due to contrast issues in chrome]  (PREVIOUS: #f-a-5-3-3-2)
+
+===============================================================
+===============================================================
+**/
+
+/*
+===============================================================
+------------------------ GLOBAL ------------------------
+===============================================================
+*/
+
+/* 
+---- BASE ---- 
+===============================================================
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html,
+body {
+  padding-top: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: #001432;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* hide nav on scroll */
+.smart-scroll {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.scrolled-up {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: #59636b transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 2px; /* 12px */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: transparent; /* #001432 */
+  border-radius: 25px;
+  border: 2px solid transparent; /* 3px #59636b */
+}
+
+/*
+  ---- TYPOGRAPHY / BUTTONS ----
+  ===============================================================
+  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+nav {
+  text-transform: lowercase;
+  /* letter-spacing: 0.1875rem; not good for mobile */
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #21e6c1;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: underline;
+  border-bottom: 0;
+}
+
+h1 a:hover,
+h1 a:focus,
+h2 a:hover,
+h2 a:focus,
+h3 a:hover,
+h3 a:focus,
+h4 a:hover,
+h4 a:focus,
+h5 a:hover,
+h5 a:focus,
+h6 a:hover,
+h6 a:focus {
+  color: #21e6c1;
+  text-decoration: underline;
+  border-bottom: 0;
+}
+
+/* FANCY SCROLL ARROWS */
+@keyframes bouncing {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+#arrow-left {
+  height: 60px;
+  bottom: 0;
+  left: 0;
+  animation: bouncing 1s infinite ease-in-out;
+}
+
+#arrow-right {
+  height: 60px;
+  bottom: 0;
+  right: 0;
+  animation: bouncing 1s infinite ease-in-out;
+}
+
+/* BUTTONS */
+.btn {
+  border-color: #21e6c1;
+  color: #21e6c1;
+  box-shadow: none;
+  font-weight: 700;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background-color: #21e6c1 !important;
+  color: #001432;
+  border-color: transparent;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+/*
+  ===============================================================
+  ------------------------ MODAL / NAVBAR ------------------------
+  ===============================================================
+  */
+
+#navigation {
+  border: 0;
+  box-shadow: none;
+}
+
+#navbarTogglerDemo02 {
+  background-color: #000c1e;
+  /* min-height: 50vh; */
+}
+
+.navbar-brand {
+  margin-right: 0;
+  justify-content: center;
+}
+
+.navbar-nav {
+  margin-top: 30px;
+}
+
+/* fix for mobile nav margin-top */
+nav .container .container {
+    margin-top: 20px;
+}
+
+.navbar-toggler {
+  border-color: #21e6c1;
+  border-radius: 0;
+}
+
+#nav-socials {
+  margin: auto 120px;
+}
+
+nav hr {
+  width: 100%;
+  color: #fff;
+  height: 2px !important;
+}
+
+nav ul {
+  margin-top: 8px !important;
+}
+
+nav sup {
+  color: #21e6c1;
+}
+
+.navbar-dark .navbar-nav .nav-link:link {
+  text-decoration: none;
+  border-bottom: 2px dotted transparent; /*can be left "transparent" as well. On removal may create shiftdown effect*/
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #21e6c1;
+  
+  -webkit-transition: 0.5s all ease-out;
+  -moz-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
+}
+
+.navbar-dark .navbar-nav .nav-link:active,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: #21e6c1;
+  text-decoration: none;
+  border-bottom: 2px solid #21e6c1;
+
+  -webkit-transition: 0.5s all ease-out;
+  -moz-transition: 0.5s all ease-out;
+  transition: 0.5s all ease-out;
+}
+
+/* Every link on page will look like this */
+#main-content a {
+  color: #21e6c1;
+  text-decoration: none;
+  border-bottom: 2px dotted transparent;
+}
+
+#main-content a:hover {
+  color: #fff;
+  border-bottom: 2px solid #21e6c1;
+}
+
+#main-content a:active,
+#main-content a:focus {
+  color: #21e6c1;
+  border-bottom: 2px solid #21e6c1;
+}
+
+/*
+  ===============================================================
+  ------------------------ ALL SECTIONS ------------------------
+  ===============================================================
+  */
+
+/* #main-content {
+    padding-top: 70px;
+  } */
+
+#about,
+#skills,
+#work,
+#blogs,
+#contact {
+  padding: 70px 0;
+  min-height: 100vh;
+}
+
+#hero {
+  min-height: 85vh;
+}
+
+#about h1,
+#skills h1,
+#work h1,
+#blogs h1,
+#contact h1 {
+  padding: 10px 0 30px;
+  font-size: 2.3rem;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+}
+
+.material-icons {
+  color: #21e6c1;
+  font-size: 30px;
+}
+
+/*
+  ===============================================================
+  ------------------------ SECTION - HERO ------------------------
+  ===============================================================
+  */
+
+/* #hero {
+    padding: 25px 25px 50px;
+  }
+  
+  #hero .row {
+    margin-bottom: 25px;
+  } */
+
+#hero h1 {
+  text-transform: uppercase;
+  padding: 40px 0 0; /*25px bottom*/
+  font-size: 4rem;
+  letter-spacing: 0.1rem;
+  line-height: 0.8;
+}
+
+#hero h1 .first-name {
+  color: #fff;
+}
+
+#hero h1 .last-name {
+  color: #21e6c1;
+}
+
+#hero .moonshot {
+  width: 100%;
+  object-fit: cover;
+  max-width: 200px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/*
+  ===============================================================
+  ------------------------ SECTION - SKILLS ------------------------
+  ===============================================================
+  */
+
+/*
+  ===============================================================
+  ------------------------ MEDIA QUERIES ------------------------
+  ===============================================================
+  */
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  /*----------SECTION-HERO----------*/
+  #hero {
+    min-height: 90vh;
+  }
+
+  /*----------Text / Image----------*/
+  p {
+    font-size: 1.2rem;
+  }
+
+  #hero p {
+    letter-spacing: 0.3rem;
+  }
+
+  #hero h1 {
+    font-size: 6rem;
+  }
+
+  #hero .moonshot {
+    max-width: 250px;
+  }
+
+  /* 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 6rem;
+  } */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /*----------NAVBAR-OLD-TOP
+    #navigation {
+      border: 0;
+      border-bottom: 1px solid #21E6C1;
+      border-spacing: 2px;
+      -moz-border-image: -moz-linear-gradient(
+        right,
+        #001432 0%,
+        #21E6C1 50%,
+        #001432 100%
+      );
+      -webkit-border-image: -webkit-linear-gradient(
+        right,
+        #001432 0%,
+        #21E6C1 50%,
+        #001432 100%
+      );
+      border-image: linear-gradient(
+        to left,
+        #001432 0%,
+        #21E6C1 50%,
+        #001432 100%
+      );
+      border-image-slice: 1;
+    }
+    ----------*/
+
+  /*----------text / image----------*/
+  #hero h1 {
+    font-size: 7rem;
+  }
+
+  #hero p {
+    letter-spacing: 0.4rem;
+  }
+
+  #hero .moonshot {
+    max-width: 361.66px;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /*----------GLOBAL----------*/
+  html,
+  body {
+    padding-top: 0;
+  }
+
+  #arrow-left {
+    margin-left: 12rem;
+  }
+
+  /*----------text / image----------*/
+  #hero h1 {
+    font-size: 8rem;
+  }
+
+  #hero p {
+    letter-spacing: 0.56rem;
+  }
+
+  #hero .moonshot {
+    max-width: 400px;
+  }
+
+  /*----------Navbar----------*/
+  nav {
+    background-color: #000c1e;
+    width: 12rem;
+    height: 100vh;
+    position: fixed;
+  }
+
+  nav .container {
+    min-height: 100vh;
+  }
+
+  nav .container .container {
+    margin-top: auto;
+}
+
+  #navbarTogglerDemo02 {
+    min-height: 100vh;
+  }
+
+  #nav-socials {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  /*----------SECTIONS----------*/
+  section {
+    padding-left: 12rem !important;
+  }
+
+  section .container-fluid {
+      padding-left: 4rem;
+  }
+
+  /*----------SECTIONS - HERO----------*/
+  #hero p {
+      padding-left: 5px;
+  }
+  #hero button {
+      margin-left: 5px;
+  }
+
+  #hero .row div:nth-child(2) {
+      width: fit-content;
+  }
+  
+}

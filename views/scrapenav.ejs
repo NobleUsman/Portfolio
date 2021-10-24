@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags ("minimum-scale=1" is a must for Chrome mobile view) -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="height=device-height, 
+                      width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0, 
+                      user-scalable=no, target-densitydpi=device-dpi">
+
+
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous" />
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/scrapenav.css" />
+
+
+    <title>Usman Shaikh | Front End Developer</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-- Navbar (add a bg-color, as BS navbar is transparent by default, but we need it transparent in mobile, so css @media...) -->
+        <nav id="navigation" class="navbar navbar-expand-xxl navbar-dark fixed-top flex-xxl-column align-items-center">
+            <div class="container">
+                <button class="navbar-toggler ms-auto text-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="sr-only">Open Navigation Overlay</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="container flex-column justify-content-around">
+
+                <div class="collapse navbar-collapse flex-column justify-content-around" id="navbarTogglerDemo02">
+
+                    <a class="navbar-brand d-flex" href="#hero">Usman<br>Shaikh</a>
+
+                    <div class="d-flex flex-column">
+                        <hr> <!-- separator -->
+
+                        <ul class="navbar-nav flex-xxl-column mb-2">
+
+                            <li class="nav-item d-flex justify-content-center">
+                                <a class="nav-link user-select-none" href="#about">about</a>
+                            </li>
+                            <li class="nav-item d-flex justify-content-center">
+                                <a class="nav-link user-select-none" href="#skills">my skills</a>
+                            </li>
+                            <li class="nav-item d-flex justify-content-center">
+                                <a class="nav-link user-select-none" href="#work">work</a>
+                            </li>
+                            <li class="nav-item d-flex justify-content-center">
+                                <a class="nav-link user-select-none" href="#blogs">blogs
+                                    <sup id="sup-id">
+                                        new
+                                        <span class="visually-hidden">new content</span>
+                                    </sup>
+                                </a>
+                            </li>
+                            <li class="nav-item d-flex justify-content-center">
+                                <a class="nav-link user-select-none" href="#contact">contact</a>
+                            </li>
+                        </ul>
+
+                        <hr> <!-- separator -->
+                    </div>
+
+
+                    <ul id="nav-socials" class="navbar-nav flex-row justify-content-around mb-2">
+
+                        <li class="nav-item">
+                            <a class="nav-link user-select-none" href="https://twitter.com/heyusmanhere">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link user-select-none" href="https://www.linkedin.com/in/usmanshaikhhere/">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link user-select-none" href="https://www.facebook.com/heyusmanhere/">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link user-select-none" href="https://github.com/NobleUsman">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            </div>
+        </nav>
+
+    </header>
+
+
+    <div id=main-content>
+
+        <!-- Hero -->
+        <section id="hero" class="d-flex align-items-center position-relative">
+            <div class="container-fluid">
+
+                <div class="row align-items-xxl-center">
+
+                    <div class="col-12 d-flex justify-content-center col-xxl-6 justify-content-xxl-start">
+                        <img src="img/monsoon-shot.jpg" alt="Photo of Usman Shaikh" class="moonshot user-select-none" />
+                    </div>
+
+                    <div class="col-12 order-xxl-first d-flex flex-column align-items-center col-xxl-6 align-items-xxl-start">
+                        <h1>
+                            <span class="first-name">Usman</span><br />
+                            <span class="last-name">Shaikh</span>
+                        </h1>
+                        <p class="user-select-all">Front End Developer</p>
+                        <button type="button" onclick="location.href='#contact'"
+                            class="btn btn-outline-primary rounded-0 align-self-xxl-start">Contact me!</button>
+                    </div>
+
+                </div>
+
+            </div>
+        
+            <!-- Fancy Scroll Arrows -->
+            <div id="arrow-left" class="position-absolute">
+                <div class="d-flex flex-column">
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </div>
+            <div id="arrow-right" class="position-absolute">
+                <div class="d-flex flex-column">
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <!-- About -->
+        <section id="about" class="position-relative d-md-flex align-items-center">
+            <div class="container-fluid">
+
+                <div>
+                    <div class="text-center user-select-none">
+                        <span class="material-icons">house</span>
+                    </div>
+    
+                    <h1 class="text-center user-select-none">me, myself & i</h1>
+                </div>
+                
+
+                <div class="row"> <!--  justify-content-center to center, but thats a diff story as diff style adopted -->
+
+                    <div class="col col-md-10 col-xxl-6">
+                        <div>
+                            <p>
+                                I’m a Front-End Developer based out of Mumbai, who aims to combine the beauty of design
+                                with the logical
+                                perfection of coding. Training myself every day and pushing my own limits to discover
+                                new ways of
+                                creating a great experience for the users.
+                            </p>
+                            <p>
+                                Well-organised person with high attention to detail. Fan of MMA, outdoor activities,
+                                curated movies and
+                                English literature.
+                            </p>
+                            <p>
+                                I'm 24 years old, holding BSc In Computer Science, from Mumbai University. I also
+                                enjoyed a handful of
+                                courses outside degree. Interested in learning on a broader spectrum and working on
+                                ambitious projects
+                                with positive people.
+                            </p>
+                            <p>
+                                <a href="#contact">
+                                    Let’s make something special.
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Fancy Scroll Arrows -->
+            <div id="arrow-left" class="position-absolute">
+                <div class="d-flex flex-column">
+                    <span class="material-icons d-none d-md-block">
+                        keyboard_arrow_down
+                    </span>
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </div>
+            <div id="arrow-right" class="position-absolute">
+                <div class="d-flex flex-column">
+                    <span class="material-icons d-none d-md-block">
+                        keyboard_arrow_down
+                    </span>
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="position-relative d-md-flex align-items-center">
+            <div class="container-fluid">
+
+                <div>
+                    <div class="text-center user-select-none">
+                        <span class="material-icons">insights</span>
+                    </div>
+    
+                    <h1 class="text-center user-select-none">skills & experience</h1>
+                </div>
+                
+
+                <div class="row">
+
+                    <div class="col col-xxl-6">
+                        <div>
+                            <p>
+                                Over the past few years, I've been progress-chasing myself into something which I would
+                                love to do. This
+                                span of experience has provided me the opportunity to learn a variety of technologies to
+                                start and work
+                                with.
+                            </p>
+                            <p>
+                                I can help build or optimize your website or application. I'm open to collaborating on
+                                your digital
+                                needs in whatever way I can. Some of the examples of what that might look like:
+                            <ul>
+                                <li>
+                                    Building performant, SEO-friendly website for your small business.
+                                </li>
+                                <li>
+                                    Consulting on front-end performance issues you've been experiencing.
+                                </li>
+                                <li>
+                                    Setting up a WP website and maintaining it.
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                                That list isn't exhaustive. If you need some help, let's <a href="#contact">connect</a>
+                                to get the
+                                process started. If web
+                                forms are scary, you can also find me on <a
+                                    href="https://twitter.com/heyusmanhere">Twitter</a>, <a
+                                    href="https://www.linkedin.com/in/usmanshaikhhere/">LinkedIn</a>, or <a
+                                    href="mailto:nobleusman@outlook.com">email</a>.
+
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Fancy Scroll Arrows -->
+            <div id="arrow-left" class="position-absolute">
+                <div class="d-flex flex-column">
+                    <span class="material-icons d-none d-md-block">
+                        keyboard_arrow_down
+                    </span>
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </div>
+            <div id="arrow-right" class="position-absolute">
+                <div class="d-flex flex-column">
+                    <span class="material-icons d-none d-md-block">
+                        keyboard_arrow_down
+                    </span>
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Work -->
+        <section id="work" class="position-relative d-md-flex align-items-center">
+            <div class="container-fluid">
+
+                <div>
+                    <div class="text-center user-select-none">
+                        <span class="material-icons">laptop</span>
+                    </div>
+    
+                    <h1 class="text-center user-select-none">my work</h1>
+                </div>
+
+                <div class="row">
+
+                    <div class="col col-xxl-6">
+                        <div>
+                            <p>
+                                The primary area of my interest is the front-end.
+                                Alongside working with NodeJS and ReactJS, my passion
+                                has increased in the back-end as well.
+                            </p>
+                            <p>
+                                After hunting through Python, PHP and coming back to JavaScript, now it's a hobby turned
+                                passion after
+                                rigorous turns. By leaning more towards back-end development, currently, I'm finding a
+                                way to turn this
+                                passion from a side-hustle to a full time vocation.
+                            </p>
+                            <p>
+                                I currently work remotely with a selected freelance client base and am “open to new
+                                opportunities”.
+                            </p>
+                            <p>
+                                Estimates, questions, information? Don't hesitate to <a href="#contact">contact me</a>.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row d-none">
+
+                    <div class="col">
+                        Project1
+                    </div>
+
+                    <div class="col">
+                        Project2
+                    </div>
+
+                    <div class="col">
+                        Project3
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Fancy Scroll Arrows -->
+            <div id="arrow-left" class="position-absolute">
+                <div class="d-flex flex-column">
+                    <span class="material-icons d-none d-md-block">
+                        keyboard_arrow_down
+                    </span>
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </div>
+            <div id="arrow-right" class="position-absolute">
+                <div class="d-flex flex-column">
+                    <span class="material-icons d-none d-md-block">
+                        keyboard_arrow_down
+                    </span>
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Blogs -->
+        <section id="blogs" class="position-relative d-md-flex align-items-center">
+            <div class="container-fluid">
+
+                <div>
+                    <div class="text-center user-select-none">
+                        <span class="material-icons">text_snippet</span>
+                    </div>
+    
+                    <h1 class="text-center user-select-none">blogs</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col col-xxl-6">
+                        <p>
+                            In the build...
+                            As blogs are a work in progress, and will be added weekly, this will be updated soon.
+                            Till then you can visit:
+                        </p>
+
+                        <button type="button" onclick="location.href='https://nobleusman.github.io/'"
+                            class="btn btn-outline-primary rounded-0 align-self-xxl-start">🚧Have a look here🚧</button>
+
+                    </div>
+                </div>
+
+                <!-- link ( https://nobleusman.github.io/ ) -->
+
+            </div>
+
+            <!-- Fancy Scroll Arrows -->
+            <div id="arrow-left" class="position-absolute">
+                <div class="d-flex flex-column">
+                    <span class="material-icons d-none d-md-block">
+                        keyboard_arrow_down
+                    </span>
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </div>
+            <div id="arrow-right" class="position-absolute">
+                <div class="d-flex flex-column">
+                    <span class="material-icons d-none d-md-block">
+                        keyboard_arrow_down
+                    </span>
+                    <span class="material-icons">
+                        keyboard_arrow_down
+                    </span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="d-md-flex align-items-center">
+            <div class="container-fluid">
+
+                <div>
+                    <div class="text-center user-select-none">
+                        <span class="material-icons">call</span>
+                    </div>
+    
+                    <h1 class="text-center user-select-none">get in touch</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col col-xxl-6">
+                        <p>
+                            In the build...
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Scripts (jQuery, Bootstrap, , custom JS) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
+        crossorigin="anonymous"></script>
+
+    <script src="js/scrape.js"></script>
+
+</body>
+
+</html>
